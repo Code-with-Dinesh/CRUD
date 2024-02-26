@@ -1,0 +1,12 @@
+const express = require("express")
+const router = express.Router()
+const {dummy} = require("../contoller/commentcont.js")
+const {createComment} = require("../contoller/commentcont.js")
+const {createPost,howpost, showpost} = require("../contoller/postcontroler.js")
+const {createlike} = require("../contoller/likecontroller.js")
+router.get("/dummy",dummy)
+router.post("/comment",createComment)
+router.post("/post",createPost)
+router.get("/show",showpost)
+router.post("/like",createlike)
+module.exports = router;
